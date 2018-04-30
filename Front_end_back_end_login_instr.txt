@@ -1,0 +1,11 @@
+8080 = Front End (Client Side)
+$ cd root folder (first_flaskvue, flaskvue, etc)
+$ cd frontend
+$ npm run dev
+
+5000 = Back End (Server Side)
+$ cd root folder (first_flaskvue, flaskvue, etc)
+$ cd backend
+$ 11_env\Scripts\activate
+(env)$ cd .. (back to root folder)
+(env)$ flask run
