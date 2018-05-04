@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify
 from random import *
+from random import choice
 from flask_cors import CORS
 import requests
 
@@ -8,10 +9,14 @@ app = Flask(__name__,
 			template_folder = "./dist")
 cors = CORS(app, resources={r"/api/*": {"origins": "*"}})			
 @app.route('/api/random')
-def random_number():
+
+#songs = ['Little Red Rooster, Key of G', 'Basic 12-bar Blues, Any Key',
+ #    'Should I Stay or Should I Go?, Key of E']
+ #response = {'Song': random.choice(songs)		
+def random_song():
     response = {
-        'randomNumber': randint(1, 100)
-		}
+        'randomSong': random.choice(songs)
+        }
     return jsonify(response)
 	
 @app.route('/', defaults={'path': ''})

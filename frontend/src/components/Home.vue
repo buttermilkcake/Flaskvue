@@ -3,33 +3,34 @@ import axios from 'axios'
 <template>
   <div>
     <p>Home Page</p>
-	<p>Random number from backend: {{ randomNumber }}</p>
-    <button @click="getRandom">New random number</button>
+	<p>Random Song From Backend: {{ randomSong }}</p>
+    <button @click="getRandom">New Random Song</button>
   </div>
 </template>  
 
 <script>
+/* eslint-disable */
+
 export default {
   data () {
     return {
-      randomNumber: 0
+      randomSong: 'Smokestack Lightning, Key of C'
     }
   },
   methods: {
-    getRandomInt (min, max) {
-      min = Math.ceil(min)
-      max = Math.floor(max)
-      return Math.floor(Math.random() * (max - min + 1)) + min
-    },
+    getRandomChoice (songs) {
+	songs = ['Little Red Rooster, Key of G', 'Basic 12-bar Blues, Any Key', 'Should I Stay or Should I Go?, Key of E']
+	return random.choice(songs)
+	},
     getRandom () {
-      this.randomNumber = this.getRandomInt(1, 100)
+      this.randomSong = this.getRandomChoice(songs)
     }
   },
   getRandomFromBackend () {
       const path = `http://localhost:5000/api/random`
       axios.get(path)
       .then(response => {
-        this.randomNumber = response.data.randomNumber
+        this.randomSong = response.data.randomSong
       })
       .catch(error => {
         console.log(error)
