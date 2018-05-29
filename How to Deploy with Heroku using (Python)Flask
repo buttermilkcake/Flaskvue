@@ -27,3 +27,15 @@ if __name__=='__run__':
     app.run(host='0.0.0.0', port=port)
     
     Set up a .gitignore folder in your main directory and enter what I have in my .gitignore file. 
+    Now we need to commit the project in git:
+    in your virtual environment: git init
+    git add .
+    git commit -am "Ready for deployment to heroku."
+    git status
+    
+    Now we push to Heroku like this:
+    in virtual environment $ heroku login
+    enter your email and password
+    $ heroku create (unless you already have a heroku file to put this in)
+    $ git push heroku master
+    $ heroku git:remote - name-of-heroku-account (use this if you already have an existing repository - this will add the heroku remote)
