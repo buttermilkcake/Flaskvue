@@ -39,3 +39,7 @@ if __name__=='__run__':
     $ heroku create (unless you already have a heroku file to put this in)
     $ git push heroku master
     $ heroku git:remote - name-of-heroku-account (use this if you already have an existing repository - this will add the heroku remote)
+    
+    5/29/18 Push to Heroku failed for these reasons:
+    Node.js: package.json not found in application root
+    ! [remote rejected] master -> (pre-receive hook declined)
