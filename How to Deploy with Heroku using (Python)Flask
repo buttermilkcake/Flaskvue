@@ -1,0 +1,19 @@
+Deploy with Python (or backend software)
+Start here: https://devcenter.heroku.com/articles/getting-started-with-python#introduction
+The tutorial assumes that you have:
+a free Heroku account.
+Python version 3.6 installed locally - see the installation guides for OS X, Windows, and Linux.
+Pipenv installed locally. Accomplish this by running pip install pipenv.
+Postgres installed locally, if running the app locally.
+Once you have done the above, Got to p. 466 in Python Crash Course:
+Where he says install the Heroku Toolbelt (now defunct), instead install Heroku CLI - go here to do that:
+https://devcenter.heroku.com/articles/getting-started-with-python#set-up
+Then go back to p. 466 in Python Crash course and install these required packages from a virtual environment (get into file (flaskvue, etc, 
+then backend, set up virtual environment 11_env\Scripts\activate. Once in virtual environment, cd back to program (flaskvue) - you are now
+in virtual environment. pip install dj-database-ur, pip install dj-static, pip install static3, pip install gunicorn some of these may not 
+install on windows
+Create a packages list with a requirements.txt file with this command in the virtual environment: pip freeze > requirements.txt
+Open the requirements.txt file and add this: psycopg2>=2.6.1
+Specify the Python Runtime - check your version of python with this command in your virtual environment: python --version
+Create a new file in the flaskvue (or main) directory for this project called runtime.txt and enter the following into it:
+python-3.6.4 (whatever version your machine told you)
