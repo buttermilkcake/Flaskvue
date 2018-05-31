@@ -49,3 +49,9 @@ Windows file extensions too long, had to fix
 Created a package.json file in root folder
 Updated Python to 3.6.5.
 Pussh failed - hook issue again.
+
+5/31/18
+Able to get app to deploy twice, but unable to open on Heroku site. It is trying to start with the command 'python manage.py runserver' 
+this is the command to start another python app I have set up, but have no idea why this app pulled that command up. I suspect it is 
+supposed to start with npm run server, but don't know at this point how to fix it and where it fix it and what my package.json file is
+really supposed to look like and which index.js file my app is starting with since my app has ~20 different index.js files in it.
