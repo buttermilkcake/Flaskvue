@@ -43,3 +43,9 @@ if __name__=='__run__':
     5/29/18 Push to Heroku failed for these reasons:
     Node.js: package.json not found in application root
     ! [remote rejected] master -> (pre-receive hook declined)
+
+5/30/18 
+Windows file extensions too long, had to fix
+Created a package.json file in root folder
+Updated Python to 3.6.5.
+Pussh failed - hook issue again.
