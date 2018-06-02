@@ -18,7 +18,7 @@ Specify the Python Runtime - check your version of python with this command in y
 Create a new file in the flaskvue (or main) directory for this project called runtime.txt and enter the following into it:
 python-3.6.4 (whatever version your machine told you)
 Now make a procfile in your main directory - capital P and no file extension: Procfile. The Procfile tells the web what file to open
-to make the website 'go'. In this projejt, the file that makes it go is called run.py. Once you have created it, enter 
+to make the website 'go'. In this project, the file that makes it go is called run.py. Once you have created it, enter 
 this text into it: 
 web: gunicorn run.py --log-file -
 if __name__=='__run__':
@@ -43,6 +43,8 @@ if __name__=='__run__':
     5/29/18 Push to Heroku failed for these reasons:
     Node.js: package.json not found in application root
     ! [remote rejected] master -> (pre-receive hook declined)
+    
+    Had to create a package.json file
 
 5/30/18 
 Windows file extensions too long, had to fix
