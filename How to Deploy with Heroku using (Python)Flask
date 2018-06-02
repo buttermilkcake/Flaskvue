@@ -21,10 +21,13 @@ Now make a procfile in your main directory - capital P and no file extension: Pr
 to make the website 'go'. In this project, the file that makes it go is called run.py. Once you have created it, enter 
 this text into it: 
 web: gunicorn run.py --log-file -
-if __name__=='__run__':
+
+***NOT SURE ABOUT THIS PART 
+    if __name__=='__run__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
+*****
     
     Set up a .gitignore folder in your main directory and enter what I have in my .gitignore file. 
     Now we need to commit the project in git:
