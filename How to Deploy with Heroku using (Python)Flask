@@ -20,7 +20,7 @@ python-3.6.4 (whatever version your machine told you)
 Now make a procfile in your main directory - capital P and no file extension: Procfile. The Procfile tells the web what file to open
 to make the website 'go'. In this project, the file that makes it go is called run.py. Once you have created it, enter 
 this text into it: 
-web: gunicorn run.py --log-file -
+web: gunicorn app:app --log-file -
 
 ***NOT SURE ABOUT THIS PART 
     if __name__=='__run__':
@@ -60,3 +60,8 @@ Able to get app to deploy twice, but unable to open on Heroku site. It is trying
 this is the command to start another python app I have set up, but have no idea why this app pulled that command up. I suspect it is 
 supposed to start with npm run server, but don't know at this point how to fix it and where it fix it and what my package.json file is
 really supposed to look like and which index.js file my app is starting with since my app has ~20 different index.js files in it.
+
+6/11/18
+Able to get app to deploy, but unable to open on Heroku site. I have an H10 error when I look at the Heroku logs, but Heroku's 
+explanation on how to fix it is as worthless as tits on a boar. I may have to ask for help if I actually want this project to get 
+anywhere.
