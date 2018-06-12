@@ -20,7 +20,9 @@ python-3.6.4 (whatever version your machine told you)
 Now make a procfile in your main directory - capital P and no file extension: Procfile. The Procfile tells the web what file to open
 to make the website 'go'. In this project, the file that makes it go is called run.py. Once you have created it, enter 
 this text into it: 
-web: gunicorn app:app --log-file -
+web: gunicorn app:app 
+6/12/18 - NOT SURE ABOUT REST OF THIS FOR PROCFILE
+--log-file -
 
 ***NOT SURE ABOUT THIS PART 
     if __name__=='__run__':
@@ -65,3 +67,9 @@ really supposed to look like and which index.js file my app is starting with sin
 Able to get app to deploy, but unable to open on Heroku site. I have an H10 error when I look at the Heroku logs, but Heroku's 
 explanation on how to fix it is as worthless as tits on a boar. I may have to ask for help if I actually want this project to get 
 anywhere.
+
+6/12/18
+Had Python 3.6.4 in virtual environment, but 3.6.5 on local machine. Created a new virtual environment and this automatically upgraded
+my virtual version to 3.6.5, which I specified in the runtime.txt. Then I found out how to properly install my vue and node version in
+the engines part of my root package.json. I hadn't specified them before and heroku was grabbing older versions during deploy which was
+causing a pruning error with npm.
