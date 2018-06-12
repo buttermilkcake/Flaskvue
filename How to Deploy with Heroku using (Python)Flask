@@ -19,17 +19,14 @@ Create a new file in the flaskvue (or main) directory for this project called ru
 python-3.6.4 (whatever version your machine told you)
 Now make a procfile in your main directory - capital P and no file extension: Procfile. The Procfile tells the web what file to open
 to make the website 'go'. In this project, the file that makes it go is called run.py. Once you have created it, enter 
-this text into it: 
-web: gunicorn app:app 
-6/12/18 - NOT SURE ABOUT REST OF THIS FOR PROCFILE
---log-file -
+this text into it. run=name of the app that makes your website go: 
 
-***NOT SURE ABOUT THIS PART 
-    if __name__=='__run__':
+web: gunicorn run:app --log-file - 
+
+if __name__=='__run__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-*****
     
     Set up a .gitignore folder in your main directory and enter what I have in my .gitignore file. 
     Now we need to commit the project in git:
@@ -73,3 +70,8 @@ Had Python 3.6.4 in virtual environment, but 3.6.5 on local machine. Created a n
 my virtual version to 3.6.5, which I specified in the runtime.txt. Then I found out how to properly install my vue and node version in
 the engines part of my root package.json. I hadn't specified them before and heroku was grabbing older versions during deploy which was
 causing a pruning error with npm.
+
+I had to reconfigure the procfile as well to get this to go - see above on setting up the procefile. Now my app on heroku will show the 
+old vue logo and nothing else, but this is progress from showing nothing before. Now I need to figure out how to make it all connect
+and show what I want it to show. It may be that I need to also deploy with vue, but I don't know how to make them deploy together on the 
+same dyno.
