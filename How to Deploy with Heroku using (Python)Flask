@@ -46,7 +46,7 @@ if __name__=='__run__':
     Node.js: package.json not found in application root
     ! [remote rejected] master -> (pre-receive hook declined)
     
-    Had to create a package.json file
+    Had to create a package.json file in the root directory using npm init
 
 5/30/18 
 Windows file extensions too long, had to fix
