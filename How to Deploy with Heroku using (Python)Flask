@@ -52,7 +52,7 @@ if __name__=='__run__':
 Windows file extensions too long, had to fix
 Created a package.json file in root folder
 Updated Python to 3.6.5.
-Pussh failed - hook issue again.
+Push failed - hook issue again.
 
 5/31/18
 Able to get app to deploy twice, but unable to open on Heroku site. It is trying to start with the command 'python manage.py runserver' 
@@ -72,6 +72,6 @@ the engines part of my root package.json. I hadn't specified them before and her
 causing a pruning error with npm.
 
 I had to reconfigure the procfile as well to get this to go - see above on setting up the procefile. Now my app on heroku will show the 
-old vue logo and nothing else, but this is progress from showing nothing before. Now I need to figure out how to make it all connect
+vue logo and nothing else, but this is progress from showing nothing before. Now I need to figure out how to make it all connect
 and show what I want it to show. It may be that I need to also deploy with vue, but I don't know how to make them deploy together on the 
 same dyno.
