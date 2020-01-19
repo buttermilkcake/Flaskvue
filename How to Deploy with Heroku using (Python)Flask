@@ -5,7 +5,7 @@ a free Heroku account.
 Python version 3.6 installed locally - see the installation guides for OS X, Windows, and Linux.
 Pipenv installed locally. Accomplish this by running pip install pipenv.
 Postgres installed locally, if running the app locally.
-Once you have done the above, Got to p. 466 in Python Crash Course:
+Once you have done the above, Go to p. 466 in Python Crash Course:
 Where he says install the Heroku Toolbelt (now defunct), instead install Heroku CLI - go here to do that:
 https://devcenter.heroku.com/articles/getting-started-with-python#set-up
 Then go back to p. 466 in Python Crash course and install these required packages from a virtual environment (get into file (flaskvue, etc, 
